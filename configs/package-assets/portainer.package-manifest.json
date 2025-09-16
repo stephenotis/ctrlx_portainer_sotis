@@ -1,0 +1,27 @@
+{
+ "$schema": "https://json-schema.boschrexroth.com/ctrlx-automation/ctrlx-core/apps/package-manifest/package-manifest.v1.1.schema.json",
+ "version": "1.0.0",
+ "id": "portainer-agent",
+ "menus": {
+   "sidebar": [
+     {
+       "id": "portainer.agent",
+       "title": "Portainer Agent",
+       "icon": "bosch-ic-construction",
+       "target": "_blank",
+       "link": "https://${hostname}:9001",
+       "permissions": []
+     }
+   ],
+   "overview": [
+     {
+       "id": "portainer.agent",
+       "title": "Portainer Agent",
+       "icon": "bosch-ic-construction",
+       "target": "_blank",
+       "link": "https://${hostname}:9001",
+       "permissions": []
+     }
+   ]
+ }
+}
