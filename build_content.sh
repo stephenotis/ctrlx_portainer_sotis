@@ -6,7 +6,7 @@ fi
 echo TARGET_ARCH: ${TARGET_ARCH}
 
 IMAGE_NAME="portainer/agent"
-IMAGE_TAG="2.30.1"
+IMAGE_TAG="2.33.1"
 DOCKER_CLI="/snap/bin/docker"
 
 echo --- create ./docker-compose/docker-compose.env
