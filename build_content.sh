@@ -14,7 +14,7 @@ rm -v -f ./docker-compose/docker-compose.env
 
 echo IMAGE_NAME=${IMAGE_NAME} >> ./docker-compose/docker-compose.env
 echo IMAGE_TAG=${IMAGE_TAG} >> ./docker-compose/docker-compose.env
-echo EDGE_KEY= <insert here your server EDGE_KEY> >> ./docker-compose/docker-compose.env
+echo EDGE_KEY= aHR0cHM6Ly8xOTIuMTY4LjAuMTIzOjk0NDN8MTkyLjE2OC4wLjEyMzo4MDAwfEN1S2xkUDR1VUZBSm1HWDJFNVRwdVBXcUdCTytrUU9ueFMzdHFQSlpTWDg9fDQ >> ./docker-compose/docker-compose.env
 echo EDGE_ID="1234567890" ./docker-compose/docker-compose.env #insert edge ID of choice
 
 echo --- create docker image with platform ${TARGET_ARCH}
