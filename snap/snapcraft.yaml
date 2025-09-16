@@ -1,0 +1,48 @@
+name: portainer-agent
+version: '2.30.1'
+base: core20
+summary: Portainer Edge Agent
+description: |
+ This snap contains the Portainer Edge Agent docker image.
+ The agent will automatically connect to Portainer Edge Management.
+
+grade: stable
+confinement: strict
+
+parts:
+ docker-compose:
+   plugin: dump
+   source: ./docker-compose
+   organize:
+     '*': docker-compose/${SNAPCRAFT_PROJECT_NAME}/
+ configs:
+   source: ./configs
+   plugin: dump
+   organize:
+     'package-assets/*': package-assets/${SNAPCRAFT_PROJECT_NAME}/
+
+slots:
+ docker-compose:
+   interface: content
+   content: docker-compose
+   source:
+     read:
+       - $SNAP/docker-compose/${SNAPCRAFT_PROJECT_NAME}
+ docker-volumes:
+   interface: content
+   content: docker-volumes
+   source:
+     write:
+       - $SNAP_DATA/docker-volumes/${SNAPCRAFT_PROJECT_NAME}
+ package-assets:
+   interface: content
+   content: package-assets
+   source:
+     read:
+       - $SNAP/package-assets/${SNAPCRAFT_PROJECT_NAME}
+ package-run:
+   interface: content
+   content: package-run
+   source:
+     write:
+       - $SNAP_DATA/package-run/${SNAPCRAFT_PROJECT_NAME}     
