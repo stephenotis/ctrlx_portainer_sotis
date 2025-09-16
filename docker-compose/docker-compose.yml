@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+ portainer-agent:
+   image: ${IMAGE_NAME}:${IMAGE_TAG}
+   container_name: portainer_edge_agent
+   environment:
+     - EDGE=1
+     - EDGE_ID=${EDGE_ID}
+     - EDGE_KEY=${EDGE_KEY}
+     - EDGE_INSECURE_POLL=1
+   volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - /var/snap/ctrlx-docker/common/var-lib-docker/volumes:/var/lib/docker/volumes
+     - /:/host
+     - portainer_agent_data:/data
+   restart: always
+volumes:
+ portainer_agent_data:
