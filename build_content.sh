@@ -14,8 +14,8 @@ rm -v -f ./docker-compose/docker-compose.env
 
 echo IMAGE_NAME=${IMAGE_NAME} >> ./docker-compose/docker-compose.env
 echo IMAGE_TAG=${IMAGE_TAG} >> ./docker-compose/docker-compose.env
-echo EDGE_KEY=aHR0cHM6Ly8xOTIuMTY4LjAuMTIzOjk0NDN8MTkyLjE2OC4wLjEyMzo4MDAwfEN1S2xkUDR1VUZBSm1HWDJFNVRwdVBXcUdCTytrUU9ueFMzdHFQSlpTWDg9fDQ >> ./docker-compose/docker-compose.env
-echo EDGE_ID=a4b74bcd-0a12-42f3-881c-deea4b2b4a84 >> ./docker-compose/docker-compose.env #insert edge ID of choice
+echo EDGE_KEY=<insert key here> >> ./docker-compose/docker-compose.env
+echo EDGE_ID=c<insert id here> >> ./docker-compose/docker-compose.env #insert edge ID of choice
 
 echo --- create docker image with platform ${TARGET_ARCH}
 rm -f -v ./docker-compose/*.tar
